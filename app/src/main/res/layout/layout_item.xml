@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingVertical="20dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.878" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/imageView"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.005" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:contentDescription="@string/n"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tp1"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/item_1"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/_50"
+        android:textColor="@color/blue_200"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/textView_title"
+        app:layout_constraintStart_toEndOf="@id/textView_title" />
+
+    <TextView
+        android:id="@+id/textView_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_1"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/textView_title"
+        app:layout_constraintTop_toBottomOf="@id/textView_title" />
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageView_add"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginEnd="5dp"-->
+<!--        android:background="@drawable/ic_baseline_circle_24"-->
+<!--        android:contentDescription="@string/add_item"-->
+<!--        android:padding="5dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/ic_baseline_add_24"-->
+<!--        app:layout_constraintDimensionRatio="1:1"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="@id/guideline_vertical3"-->
+<!--        app:layout_constraintTop_toTopOf="@id/guideline_horizontal1"-->
+<!--        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageView_remove"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginEnd="5dp"-->
+<!--        android:background="@drawable/ic_baseline_circle_24"-->
+<!--        android:contentDescription="@string/add_item"-->
+<!--        android:padding="5dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/ic_baseline_remove_24"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal"-->
+<!--        app:layout_constraintDimensionRatio="1:1"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="@id/guideline_vertical3"-->
+<!--        tools:ignore="TouchTargetSizeCheck" />-->
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/blue_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
